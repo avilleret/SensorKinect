@@ -72,6 +72,7 @@ public:
 	XnBool IsViewPointAs(xn::ProductionNode& OtherNode);
 	XnStatus RegisterToViewPointChange(XnModuleStateChangedHandler handler, void* pCookie, XnCallbackHandle& hCallback);
 	void UnregisterFromViewPointChange(XnCallbackHandle hCallback);
+    XnStatus GetPixelCoordinatesInViewPoint(xn::ProductionNode&, XnUInt32, XnUInt32, XnUInt32&, XnUInt32&) {return XN_STATUS_OK; }
 
 	xn::ModuleFrameSyncInterface* GetFrameSyncInterface() { return this; }
 	XnBool CanFrameSyncWith(xn::ProductionNode& OtherNode);
